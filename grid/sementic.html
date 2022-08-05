@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Sementic</title>
+    <style>
+        .item{
+            border: 2px solid red;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .mainContainer{
+            display: grid;
+            grid-gap:20px;
+            grid-template-rows: 80px 270px 120px 70px;
+        }
+        .midBox{
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: 3fr 1fr;
+        }
+        .section{
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(2, auto);
+        }
+        .aside{
+            display: grid;
+            grid-gap: 20px;
+            grid-template-rows: repeat(3, auto);
+        }
+        .lastBox{
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(2, auto);
+        }
+    </style>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="navBox item">Navbar</div>
+        <div class="midBox">
+            <div class="section">
+                <div class="item1 item">Left 1</div>
+                <div class="item2 item">Left 2</div>
+            </div>
+            <div class="aside">
+                <div class="item3 item">Right 1</div>
+                <div class="item4 item">Right 2</div>
+                <div class="item5 item">Right 3</div>
+            </div>
+        </div>
+        <div class="lastBox">
+            <div class="item6 item">Down 1</div>
+            <div class="item7 item">Down 2</div>
+        </div>
+        <div class="footBox item">Footer</div>
+    </div>
+</body>
+</html>
