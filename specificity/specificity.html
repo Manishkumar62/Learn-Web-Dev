@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>specificity</title>
+    <style>
+        .favorite{
+            color: red;
+            font-weight: bold;
+        }
+
+        .favorite{
+            color: blue;
+            font-weight: bold;
+        }
+        body{
+            color: blue;
+        }
+        .class-1 a{
+            color: inherit;
+        }
+        .class-2 a{
+            color: initial;
+        }
+        .class-3 a{
+            color: unset;
+        }
+        .important{
+            color: blue !important;
+        }
+        .box{
+            border: 2px solid black;
+            width: 200px;
+            height: 300px;
+        } 
+        .word{
+            border: 3px solid black;
+            font-size: 200%;
+            width: 180px;
+            overflow: auto;
+        }
+        .box1{
+            width: 300px;
+            height: 300px;
+            border: 4px solid black;
+            margin: 10px;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: fill;
+        }
+    </style>
+    <link rel="stylesheet" href="specificity.css">
+</head>
+<body>
+    <p class="important" style="color: red;">This is a red color but using !important it become blue</p>
+    <ul>
+        <li>Mountain Dew</li>
+        <li class="favorite">This is first red then blue and bold in internal but black in external css</li>
+        <li>Jeeru</li>
+    </ul>
+    <ul>
+        <li> <a href="">DefaultLinkColor</a> </li>
+        <li class="class-1"> <a href="">InheritedLinkColorFromeBody</a> </li>
+        <li class="class-2"> <a href="">InitialLinkColorWillAlwaysBeBlack</a> </li>
+        <li class="class-3">Unset <a href="">LinkColorFromeBody</a> color</li>
+    </ul>
+    <div class="box">Div tag with border height width and Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Repudiandae atque inventore soluta doloremque,
+        cum accusantium sapiente dolor quis quidem beatae fugiat, porro harum debitis!
+        Aliquam est molestiae animi ipsum aliquid,
+        reiciendis ex explicabo pariatur tenetur praesentium minus. Magnam animi,
+        et quidem dolor modi voluptate nobis ratione quas quaerat earum numquam!
+    </div>
+    <p1>This content is outside of the box.</p1>
+    <div class="word">Overflow</div>
+    <div class="wrapper">
+        <div class="box1"><img src="img/IMG-20201115-WA0006.jpg" alt=""></div>
+    </div>
+</body>
+</html>
