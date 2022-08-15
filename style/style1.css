@@ -1,0 +1,52 @@
+#heading{
+    color: red;
+    background-color: black;
+}
+h4{
+    color: blueviolet;
+}
+p3,
+a{
+    color: green;
+}
+ul1 li{
+    list-style-type: lower-roman;
+}
+.special{
+    color: orange;
+    font-weight:bold ;
+}
+span.special,
+li.special{
+    color: orchid;
+}
+li em{
+    color: rebeccapurple;
+}
+h5+p{
+    font-size: 200%;
+}
+p a:hover{
+    color: violet;
+    text-decoration: none;
+}
+body h5+p .special{
+    color: yellow;
+    background-color: black;
+    padding: 5px;
+}
+p#one{
+    color: rebeccapurple;
+}
+li[class]{
+    font-size: 300%;
+}
+li[class="c"]{
+    color: royalblue;
+}
+li[class~="a"]{
+    color: red;
+}
+*{
+    list-style-type: none;
+}
